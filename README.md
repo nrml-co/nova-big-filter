@@ -5,7 +5,7 @@
 
 ## Installation
 
-You can install the package in to a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
+Install the package in to a [Laravel Nova](https://nova.laravel.com) Project via composer:
 
 ```bash
 composer require nrml-co/nova-big-filter
@@ -13,7 +13,7 @@ composer require nrml-co/nova-big-filter
 
 ## Usage
 
-You need to add card to resource with specified filter.
+Add the class to the card array of a resource with filters.
 
 ```php
 
