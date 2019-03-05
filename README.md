@@ -12,13 +12,15 @@ composer config repositories.nova-big-filter vcs https://github.com/nrml-co/nova
 composer require nrml-co/nova-big-filter
 ```
 
+This is the composer + github way.  Application on packagist is pending. 
+
 ## Usage
 
 You need to add card to resource with specified filter.
 
 ```php
 
-use NrmlCo\NovaBigFilter;
+use NrmlCo\NovaBigFilter\NovaBigFilter;
 use App\Nova\Filters\YourFilter;
 use App\Nova\Filters\YourOtherFilter;
 
@@ -32,8 +34,7 @@ public function filters()
 
 public function cards()
 {
-    return [
-        // Other cards...,
+    return [        
         new NovaBigFilter,
     ];
 }
