@@ -1,10 +1,10 @@
 <?php
 
-namespace NrmlCo\Nova;
+namespace NrmlCo\NovaBigFilter;
 
 use Laravel\Nova\Card;
 
-class BigFilter extends Card
+class NovaBigFilter extends Card
 {
     /**
      * The width of the card (1/3, 1/2, or full).
