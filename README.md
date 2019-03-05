@@ -8,8 +8,8 @@
 You can install the package in to a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
 
 ```bash
-composer config repositories.nova-big-filter-menu vcs https://github.com/nrml-co/nova-big-filter-menu
-composer require nrml-co/nova-big-filter-menu
+composer config repositories.nova-big-filter vcs https://github.com/nrml-co/nova-big-filter
+composer require nrml-co/nova-big-filter
 ```
 
 ## Usage

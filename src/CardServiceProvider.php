@@ -1,6 +1,6 @@
 <?php
 
-namespace NrmlCo\NovaBigFilterMenu;
+namespace NrmlCo\NovaBigFilter;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;
@@ -21,8 +21,8 @@ class CardServiceProvider extends ServiceProvider
         });
 
         Nova::serving(function (ServingNova $event) {
-            Nova::script('nova-big-filter-menu', __DIR__.'/../dist/js/card.js');
-            Nova::style('nova-big-filter-menu', __DIR__.'/../dist/css/card.css');
+            Nova::script('nova-big-filter', __DIR__.'/../dist/js/card.js');
+            Nova::style('nova-big-filter', __DIR__.'/../dist/css/card.css');
         });
     }
 
@@ -38,7 +38,7 @@ class CardServiceProvider extends ServiceProvider
         }
 
         Route::middleware(['nova'])
-                ->prefix('nova-vendor/nova-big-filter-menu')
+                ->prefix('nova-vendor/nova-big-filter')
                 ->group(__DIR__.'/../routes/api.php');
     }
 

@@ -4,7 +4,7 @@ namespace NrmlCo\NovaBigFilterMenu;
 
 use Laravel\Nova\Card;
 
-class NovaBigFilterMenu extends Card
+class NovaBigFilter extends Card
 {
     /**
      * The width of the card (1/3, 1/2, or full).
@@ -20,6 +20,6 @@ class NovaBigFilterMenu extends Card
      */
     public function component()
     {
-        return 'nova-big-filter-menu';
+        return 'nova-big-filter';
     }
 }

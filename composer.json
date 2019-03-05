@@ -1,9 +1,11 @@
 {
-    "name": "nrml-co/nova-big-filter-menu",
-    "description": "A Laravel Nova card.",
+    "name": "nrml-co/nova-big-filter",
+    "description": "A nice looking filter menu thats always open.",
     "keywords": [
         "laravel",
-        "nova"
+        "nova",
+        "filter",
+        "card"
     ],
     "license": "MIT",
     "require": {
@@ -11,13 +13,13 @@
     },
     "autoload": {
         "psr-4": {
-            "NrmlCo\\NovaBigFilterMenu\\": "src/"
+            "NrmlCo\\NovaBigFilter\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "NrmlCo\\NovaBigFilterMenu\\CardServiceProvider"
+                "NrmlCo\\NovaBigFilter\\CardServiceProvider"
             ]
         }
     },

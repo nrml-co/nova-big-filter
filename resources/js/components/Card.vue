@@ -15,7 +15,7 @@
 
             <!-- Custom Filters -->
             <div v-for="filters in this.filterRows">
-                <div class="float-left nova-big-filter-menu-col">
+                <div class="float-left nova-big-filter-col">
                     <component
                             v-if="filters[0]"
                             :resource-name="resourceName"
@@ -26,7 +26,7 @@
                             @change="$emit('filter-changed')"
                     />
                 </div>
-                <div class="float-left nova-big-filter-menu-col">
+                <div class="float-left nova-big-filter-col">
                     <component
                             v-if="filters[1]"
                             :resource-name="resourceName"
@@ -37,7 +37,7 @@
                             @change="$emit('filter-changed')"
                     />
                 </div>
-                <div class="float-left nova-big-filter-menu-col">
+                <div class="float-left nova-big-filter-col">
                     <component
                             v-if="filters[2]"
                             :resource-name="resourceName"
