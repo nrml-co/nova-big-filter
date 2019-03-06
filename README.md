@@ -9,7 +9,7 @@ A nice looking filter menu that's always open.
 
 ## Install
 
-Install the package in to a [Laravel Nova](https://nova.laravel.com) Ppoject via composer:
+Install the package in to a [Laravel Nova](https://nova.laravel.com) project via composer:
 
 ```bash
 composer require nrml-co/nova-big-filter
