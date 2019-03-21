@@ -5,7 +5,7 @@
 
 A nice looking filter menu that's always open.
 
-![Nova Big Filter Screenshot](https://raw.githubusercontent.com/nrml-co/nova-big-filter/master/resources/img/nova-big-filter.png)
+![Nova Big Filter Screenshot](https://raw.githubusercontent.com/nrml-co/nova-big-filter/dev/resources/img/screenshot.png)
 
 ## Install
 
@@ -44,4 +44,21 @@ public function cards()
 }
 ```
 
+##Customization
+Adding customization functions as needed, and by request.  :)
+
+### setTitle($title)
+
+Use setTitle to change the card title.  The default is Big Filter.
+
+```php
+
+public function cards()
+{
+    return [        
+        (new NovaBigFilter)->setTitle('Something Else');,
+    ];
+}
+
+```
 
