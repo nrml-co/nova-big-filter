@@ -56,7 +56,7 @@ Use setTitle to change the card title.  The default is 'Filter Menu'.
 public function cards()
 {
     return [        
-        (new NovaBigFilter)->setTitle('Big Filter');,
+        (new NovaBigFilter)->setTitle('Big Filter'),
     ];
 }
 
