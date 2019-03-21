@@ -44,7 +44,7 @@ public function cards()
 }
 ```
 
-##Customization
+## Customization
 Adding customization functions as needed, and by request.  :)
 
 ### setTitle($title)
