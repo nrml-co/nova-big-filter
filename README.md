@@ -49,14 +49,14 @@ Adding customization functions as needed, and by request.  :)
 
 ### setTitle($title)
 
-Use setTitle to change the card title.  The default is Big Filter.
+Use setTitle to change the card title.  The default is 'Filter Menu'.
 
 ```php
 
 public function cards()
 {
     return [        
-        (new NovaBigFilter)->setTitle('Something Else');,
+        (new NovaBigFilter)->setTitle('Big Filter');,
     ];
 }
 
