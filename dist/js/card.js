@@ -339,10 +339,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             default: true
         }
     },
-    mounted: function mounted() {
-        console.log(this.card.filterMenuTitle);
-    },
-
     methods: {
         trashedChanged: function trashedChanged(event) {
             this.$emit('trashed-changed', event.target.value);

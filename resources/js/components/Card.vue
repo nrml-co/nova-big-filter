@@ -94,9 +94,6 @@
                 default: true,
             },
         },
-        mounted() {
-            console.log(this.card.filterMenuTitle)
-        },
         methods: {
             trashedChanged(event) {
                 this.$emit('trashed-changed', event.target.value)
