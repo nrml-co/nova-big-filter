@@ -14,6 +14,20 @@ class NovaBigFilter extends Card
     public $width = 'full';
 
     /**
+     * Indicates that the analytics should show current visitors.
+     *
+     * @param $title
+     *
+     * @return $this
+     */
+    public function setTitle($title = 'Filter Menux')
+    {
+        return $this->withMeta([
+            'filterMenuTitle' => $title
+        ]);
+    }
+
+    /**
      * Get the component name for the element.
      *
      * @return string
