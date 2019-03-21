@@ -5,7 +5,7 @@
 
 A nice looking filter menu that's always open.
 
-![Nova Big Filter Screenshot](https://raw.githubusercontent.com/nrml-co/nova-big-filter/dev/resources/img/screenshot.png)
+![Nova Big Filter Screenshot](https://raw.githubusercontent.com/nrml-co/nova-big-filter/master/resources/img/screenshot.png)
 
 ## Install
 
