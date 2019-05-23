@@ -42,6 +42,18 @@ class NovaBigFilter extends Card
     }
 
     /**
+     * Hide filter title (cause its obvious)
+     *
+     * @return $this
+     */
+    public function hideFilterTitle()
+    {
+        return $this->withMeta([
+            'filterHideTitle' => true
+        ]);
+    }
+
+    /**
      * Get the component name for the element.
      *
      * @return string

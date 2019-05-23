@@ -322,7 +322,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     props: {
         card: {
             filterMenuTitle: String,
-            filterMaxHeight: Number
+            filterMaxHeight: Number,
+            filterHideTitle: {
+                type: Boolean,
+                default: false
+            }
         },
         resourceName: String,
         softDeletes: Boolean,
@@ -405,24 +409,26 @@ var render = function() {
               }
             },
             [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "py-2 w-full block text-xs uppercase tracking-wide text-center text-80 dim font-bold focus:outline-none"
-                },
-                [
-                  _vm._v(
-                    "\n            " +
-                      _vm._s(
-                        this.card.filterMenuTitle
-                          ? this.card.filterMenuTitle
-                          : "Filter Menu"
-                      ) +
-                      "\n        "
+              !_vm.card.filterHideTitle
+                ? _c(
+                    "div",
+                    {
+                      staticClass:
+                        "py-2 w-full block text-xs uppercase tracking-wide text-center text-80 dim font-bold focus:outline-none"
+                    },
+                    [
+                      _vm._v(
+                        "\n            " +
+                          _vm._s(
+                            this.card.filterMenuTitle
+                              ? this.card.filterMenuTitle
+                              : "Filter Menu"
+                          ) +
+                          "\n        "
+                      )
+                    ]
                   )
-                ]
-              ),
+                : _vm._e(),
               _vm._v(" "),
               _vm._l(this.filterRows, function(filters) {
                 return _c("div", [
