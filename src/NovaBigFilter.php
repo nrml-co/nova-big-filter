@@ -28,6 +28,20 @@ class NovaBigFilter extends Card
     }
 
     /**
+     * Set maximum height of the filter block
+     *
+     * @param int $height
+     *
+     * @return $this
+     */
+    public function setMaxHeight($height = 350)
+    {
+        return $this->withMeta([
+            'filterMaxHeight' => $height
+        ]);
+    }
+
+    /**
      * Get the component name for the element.
      *
      * @return string

@@ -1,6 +1,6 @@
 <template>
     <div v-if="filters.length > 0" class="bg-30 border-b border-60">
-        <scroll-wrap :height="350">
+        <scroll-wrap :height="card.filterMaxHeight ? card.filterMaxHeight : 350">
             <div class="py-2 w-full block text-xs uppercase tracking-wide text-center text-80 dim font-bold focus:outline-none">
                 {{this.card.filterMenuTitle ? this.card.filterMenuTitle : 'Filter Menu'}}
             </div>
@@ -78,7 +78,8 @@
     export default {
         props: {
             card: {
-                filterMenuTitle: String
+                filterMenuTitle: String,
+                filterMaxHeight: Number,
             },
             resourceName: String,
             softDeletes: Boolean,

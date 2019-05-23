@@ -321,7 +321,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: {
         card: {
-            filterMenuTitle: String
+            filterMenuTitle: String,
+            filterMaxHeight: Number
         },
         resourceName: String,
         softDeletes: Boolean,
@@ -396,7 +397,13 @@ var render = function() {
         [
           _c(
             "scroll-wrap",
-            { attrs: { height: 350 } },
+            {
+              attrs: {
+                height: _vm.card.filterMaxHeight
+                  ? _vm.card.filterMaxHeight
+                  : 350
+              }
+            },
             [
               _c(
                 "div",
