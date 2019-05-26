@@ -62,3 +62,32 @@ public function cards()
 
 ```
 
+### setMaxHeight($height)
+
+Use setMaxHeight to change the max height of the filter block.  The default is 350.
+
+```php
+
+public function cards()
+{
+    return [        
+        (new NovaBigFilter)->setMaxHeight(400),
+    ];
+}
+
+```
+
+### hideFilterTitle()
+
+Use hideFilterTitle to hide a title of the filter block, if you don't need it.
+
+```php
+
+public function cards()
+{
+    return [        
+        (new NovaBigFilter)->hideFilterTitle(),
+    ];
+}
+
+```
