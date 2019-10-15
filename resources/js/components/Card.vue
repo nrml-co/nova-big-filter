@@ -14,7 +14,7 @@
             <!--</div>-->
 
             <!-- Custom Filters -->
-            <div v-for="filters in this.filterRows" :key="filters.id" @change="handleChange()">
+            <div v-for="filters in this.filterRows">
                 <div class="float-left nova-big-filter-col">
                     <component
                             v-if="filters[0]"
@@ -75,11 +75,7 @@
 </template>
 
 <script>
-    import InteractsWithQueryString from "laravel-nova/src/mixins/InteractsWithQueryString";
-    import Filterable from "laravel-nova/src/mixins/Filterable";
-
     export default {
-        mixins: [InteractsWithQueryString, Filterable],
         props: {
             card: {
                 filterMenuTitle: String,
@@ -104,10 +100,6 @@
             },
         },
         methods: {
-            handleChange() {
-                this.filterChanged();
-            },
-
             trashedChanged(event) {
                 this.$emit('trashed-changed', event.target.value)
             },
