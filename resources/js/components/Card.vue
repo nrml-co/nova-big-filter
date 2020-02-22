@@ -4,14 +4,6 @@
             <div v-if="! card.filterHideTitle" class="py-2 w-full block text-xs uppercase tracking-wide text-center text-80 dim font-bold focus:outline-none">
                 {{this.card.filterMenuTitle ? this.card.filterMenuTitle : 'Filter Menu'}}
             </div>
-            <!--<div v-if="filtersAreApplied" class="bg-30 border-b border-60">-->
-            <!--<button-->
-            <!--@click="$emit('clear-selected-filters')"-->
-            <!--class="py-2 w-full block text-xs uppercase tracking-wide text-center text-80 dim font-bold focus:outline-none"-->
-            <!--&gt;-->
-            <!--{{ __('Reset Filters') }}-->
-            <!--</button>-->
-            <!--</div>-->
 
             <!-- Custom Filters -->
             <div v-for="filters in this.filterRows">
@@ -22,8 +14,8 @@
                             :key="filters[0].name"
                             :filter-key="filters[0].class"
                             :is="filters[0].component"
-                            @input="$emit('filter-changed')"
-                            @change="$emit('filter-changed')"
+                            @input="filterChanged"
+                            @change="filterChanged"
                     />
                 </div>
                 <div class="float-left nova-big-filter-col">
@@ -33,8 +25,8 @@
                             :key="filters[1].name"
                             :filter-key="filters[1].class"
                             :is="filters[1].component"
-                            @input="$emit('filter-changed')"
-                            @change="$emit('filter-changed')"
+                            @input="filterChanged"
+                            @change="filterChanged"
                     />
                 </div>
                 <div class="float-left nova-big-filter-col">
@@ -44,8 +36,8 @@
                             :key="filters[2].name"
                             :filter-key="filters[2].class"
                             :is="filters[2].component"
-                            @input="$emit('filter-changed')"
-                            @change="$emit('filter-changed')"
+                            @input="filterChanged"
+                            @change="filterChanged"
                     />
                 </div>
             </div>
@@ -70,12 +62,24 @@
                     </select>
                 </div>
             </div>
+
+            <div v-if="filtersAreApplied" class="bg-30 border-b border-60">
+                <button
+                        @click="clearSelectedFilters"
+                        class="py-2 w-full block text-xs uppercase tracking-wide text-center text-80 dim font-bold focus:outline-none"
+                >
+                    {{ __('Reset Filters') }}
+                </button>
+            </div>
+
         </scroll-wrap>
     </div>
 </template>
 
 <script>
+    import { Filterable, InteractsWithQueryString } from 'laravel-nova'
     export default {
+        mixins: [ Filterable, InteractsWithQueryString ],
         props: {
             card: {
                 filterMenuTitle: String,
@@ -106,10 +110,18 @@
 
             perPageChanged(event) {
                 this.$emit('per-page-changed', event.target.value)
-            }
+            },
         },
 
         computed: {
+            /**
+             * Get the name of the page query string variable.
+             */
+            pageParameter() {
+                return this.viaRelationship
+                    ? this.viaRelationship + '_page'
+                    : this.resourceName + '_page'
+            },
             /**
              * Return the filters from state
              */
